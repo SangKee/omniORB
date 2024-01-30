@@ -54,11 +54,6 @@ init:
   - cmd: cd "C:\projects\"
   - appveyor DownloadFile https://github.com/tango-controls/Pthread_WIN32/releases/download/2.9.1/pthreads-win32-2.9.1_%ARCH%.zip
   - cmd: 7z -y x pthreads-win32-2.9.1_%ARCH%.zip -oC:\projects\pthreads-win32\
-
-  # sklee - fix bug "C:\projects\omniorb-windows-ci" not found
-  - cmd: md omniorb-windows-ci
-  # Finally, return to project folder before repo is cloned
-  - cmd: cd "C:\projects\omniorb-windows-ci"
   
 install:
   - cmd: set PYTHONPATH=%PYTHONPATH%
